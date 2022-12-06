@@ -133,19 +133,13 @@ input[type="radio"]{
 }
 
 .accordion input[type="radio"]:checked + label + .accordion-content{
-    max-height: 400px;
+    max-height: 100%;
     padding: 10px 10px 20px;
 }
 
 .accordion input[type="radio"]:checked + label::before{
     content: '-';
 }
-
-
-
-
-
-
 
 
 footer {
@@ -177,4 +171,31 @@ footer p a:hover {
 
 footer .social img {
     padding-top: 15px;
+}
+
+
+
+
+
+@media screen and (max-width: 900px) {
+    #hero, .home-grid {
+        display: block;
+        height: auto;
+    }
+    nav, footer {
+        flex-direction: column;
+    }
+    nav a {
+        display: block;
+        padding: 15px;
+    }
+    .learn-grid{
+        display: block;
+    }
+    #technical-analysis-box, #indicators-box{
+        margin-top: 30%;
+    }
+    footer {
+        margin-top: 25px;
+    }
 }
