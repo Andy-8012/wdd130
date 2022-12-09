@@ -55,41 +55,55 @@ header {
     grid-template-columns: 150px auto;
 }
 
-#learn-banner {
-    text-align: center;
-    position: relative;
-    width: 100%;
-    padding-bottom: 56.25%;
-    height: 0;
-    margin-bottom: 10%;
-    margin-left: 10%;
-    margin-right: 10%;
-}
-
-#learn-banner iframe {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 80%;
-    height: 80%;
-}
-
-img {
-    max-width: 1600px;
-}
-
-.learn-grid {
+.faq-grid {
     display: grid;
-    grid-template-columns: 2fr 1fr 2fr;
+    grid-template-columns: 80px 1fr;
+    margin-top: 30px;
     align-items: center;
-    align-content: center;
-    margin: 10px;
+    width: 100%;
 }
 
-.learn-grid img {
-    width: 100%;
-    margin-top: -30%;
+.question_img{
+    grid-column: 1/2;
+    grid-row: 1/2;
+    height: 80px;
+    width: 80px;
+    place-items: center;
 }
+
+.answer_img{
+    grid-column: 1/2;
+    grid-row: 2/3;
+    height: 80px;
+    width: 80px;
+    place-items: center;
+}
+
+.question_header{
+    grid-column: 2/3;
+    grid-row: 1/2;
+    text-align: left;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.answer_par{
+    grid-column: 2/3;
+    grid-row: 2/3;
+    margin-left: 20px;
+    margin-right: 20px;
+    font-size: 20px;
+}
+
+#faq-banner, section {
+    width: 100%;
+}
+
+section img, #faq-banner img {
+    width: 100%;
+}
+
+
 
 .accordion {
     margin: 60px auto;
@@ -141,7 +155,6 @@ input[type="radio"]{
     content: '-';
 }
 
-
 footer {
     background-color: #ADB6C4;
     color: #1C2862;
@@ -178,22 +191,12 @@ footer .social img {
 
 
 @media screen and (max-width: 900px) {
-    .home-grid {
-        display: block;
-        height: auto;
-    }
     nav, footer {
         flex-direction: column;
     }
     nav a {
         display: block;
         padding: 15px;
-    }
-    .learn-grid{
-        display: block;
-    }
-    #technical-analysis-box, #indicators-box{
-        margin-top: 30%;
     }
     footer {
         margin-top: 25px;
